@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+    <title>Ship Meme Creator</title>
+</head>
+
+<body>
+  <h1>SHIP MEME</h1>
+  <div class="container ship">
+
+    <!-- Ship name -->
+
+    <div class="shipname"> <h2>Ship Name : </h2> <input type="text" id="nameship" placeholder="type word here" required minlength="2" maxlength="30" size="auto" /> </div>
+
+    <!-- Main Picture -->
+
+    <div class="mainpic" id="block1">
+
+
+      <input type="file" accept="image/*" id="fileInput1" onchange="previewImage(this, 'block1')">
+      <label for="fileInput1" class="file-label"></label>
+      <div id="placeholder1" class="image-placeholder">Main Picture of your ship <br> (click to upload)</div>
+      <img id="imagePreview1" src="" alt="Image Preview" class="uploaded-image">
+
+
+    </div>
+
+
+    <!-- Aesthetics -->
+
+    <div class="aestitle"><h2>Aesthetics</h2></div>
+
+    <div class="aespic1" id="block2">
+
+      <input type="file" accept="image/*" id="fileInput2" onchange="previewImage(this, 'block2')">
+      <label for="fileInput2" class="file-label"></label>
+      <div id="placeholder2" class="image-placeholder">Aesthetic 1</div>
+      <img id="imagePreview2" src="" alt="Image Preview" class="uploaded-image">
+
+
+    </div>
+    <div class="aespic2" id="block3">
+
+      <input type="file" accept="image/*" id="fileInput3" onchange="previewImage(this, 'block3')">
+      <label for="fileInput3" class="file-label"></label>
+      <div id="placeholder3" class="image-placeholder">Aesthetic 2</div>
+      <img id="imagePreview3" src="" alt="Image Preview" class="uploaded-image">
+
+    </div>
+    <div class="aespic3" id="block4">
+
+      <input type="file" accept="image/*" id="fileInput4" onchange="previewImage(this, 'block4')">
+      <label for="fileInput4" class="file-label"></label>
+      <div id="placeholder4" class="image-placeholder">Aesthetic 3</div>
+      <img id="imagePreview4" src="" alt="Image Preview" class="uploaded-image">
+
+    </div>
+    <div class="aespic4" id="block5">
+
+      <input type="file" accept="image/*" id="fileInput5" onchange="previewImage(this, 'block5')">
+      <label for="fileInput5" class="file-label"></label>
+      <div id="placeholder5" class="image-placeholder">Aesthetic 4</div>
+      <img id="imagePreview5" src="" alt="Image Preview" class="uploaded-image">
+    </div>
+
+
+
+    <!-- Words -->
+    <div class="wordtitle"><h2>In 4 words</h2></div>
+
+    <div class="word1"><input type="text" id="word1" placeholder="type word here" required minlength="2" maxlength="15" size="auto" /></div>
+    <div class="word2"><input type="text" id="word2" placeholder="type word here" required minlength="2" maxlength="15" size="auto" /></div>
+    <div class="word3"><input type="text" id="word3" placeholder="type word here" required minlength="2" maxlength="15" size="auto" /></div>
+    <div class="word4"><input type="text" id="word4" placeholder="type word here" required minlength="2" maxlength="15" size="auto" /></div>
+
+    <!-- Color Palette -->
+    <div class="colortitle"><h2>Palette</h2></div>
+
+    <div class="color1" id="colorBlock1">
+      <div class="clickable-area" onclick="openColorPicker('colorInput1')"></div>
+      <input type="color" id="colorInput1" onchange="changeColor(this, 'colorBlock1')">
+    </div>
+    <div class="color2" id="colorBlock2">
+      <input type="color" id="colorInput2" onchange="changeColor(this, 'colorBlock2')">
+    </div>
+    <div class="color3" id="colorBlock3">
+      <input type="color" id="colorInput3" onchange="changeColor(this, 'colorBlock3')">
+    </div>
+
+    <div class="color4" id="colorBlock4">
+       <input type="color" id="colorInput4" onchange="changeColor(this, 'colorBlock4')">
+      </div>
+
+    <!-- Etc -->
+
+
+    <div class="etctitle">etctitle</div>
+
+    <!-- Emojis -->
+
+    <div class="emojis"> <h3>Emojis</h3>
+
+      <div class="emojiblock">
+        <div class="emoji-block" id="emojiBlock1" contenteditable="true"></div>
+        <div class="emoji-block" id="emojiBlock2" contenteditable="true"></div>
+      <div class="emoji3">3</div>
+      <div class="emoji4">4</div>
+    </div>
+
+    </div>
+
+    <!-- Music -->
+
+    <div class="music">music</div>
+
+    <!-- Size difference -->
+
+    <div class="sizediff" id="block6">
+      <input type="file" accept="image/*" id="fileInput6" onchange="previewImage(this, 'block6')">
+      <label for="fileInput6" class="file-label"></label>
+      <div id="placeholder6" class="image-placeholder">
+        <p>Size difference <br><small> check it at <a href="/">site</a> </small></p>
+      </div>
+      <img id="imagePreview6" src="" alt="Image Preview" class="uploaded-image">
+    </div>
+
+
+
+
+  </div>
+
+  <!-- Boutons -->
+
+  <div class="boutons">
+    <button class="light">light</button>
+    <button class="save">save</button>
+    <button class="reset" onClick="window.location.reload();">reset</button>
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/emoji-button@5.0.0/dist/emoji-button.min.js"></script>
+  <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script2.js"></script>
+  <script type="text/javascript" src="script3.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+*:focus {
+  outline: none;
+}
+
+.ship>div {
+  border: 1px solid black;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 3fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "etctitle colortitle shipname aestitle wordtitle"
+    "emojis color1 mainpic aespic1 word1"
+    "music color2 mainpic aespic2 word2"
+    "sizediff color3 mainpic aespic3 word3"
+    "sizediff color4 mainpic aespic4 word4";
+  border: 1px solid red !important;
+  padding: 10px;
+}
+
+.ship {
+  height: 700px;
+}
+
+.boutons {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid blue;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.file-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+  /* Make label transparent */
+}
+
+input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #172e94;
+  text-align: center;
+  line-height: 100px;
+  /* Match the height of the image block */
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+
+.uploaded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  /* Initially hide the uploaded image */
+}
+
+.mainpic {
+  grid-area: mainpic;
+  border: 2px solid rgb(185, 64, 84) !important;
+  position: relative;
+  background-image: url(bg.png);
+  border-radius: 4%;
+}
+
+.shipname {
+  grid-area: shipname;
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.shipname input[type="text"] {
+  padding-left: 20px;
+  text-align: left !important;
+  border: 0px solid red !important;
+  color: red;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.aestitle {
+  grid-area: aestitle;
+}
+
+.aespic1 {
+  grid-area: aespic1;
+  border: 2px solid rgb(20, 240, 104) !important;
+  position: relative;
+  background-image: url(bg.png);
+}
+
+.aespic2 {
+  grid-area: aespic2;
+}
+
+.aespic3 {
+  grid-area: aespic3;
+}
+
+.aespic4 {
+  grid-area: aespic4;
+}
+
+
+input[type="text"] {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 100;
+  cursor: pointer; */
+  font-size: 1.5em;
+  border: none;
+  text-align: center;
+  color: rebeccapurple;
+} 
+
+.wordtitle, .word1, .word2, .word3, .word4 {
+  display: flex;
+  justify-content: center;
+}
+
+.wordtitle {
+  grid-area: wordtitle;
+}
+
+.word1 {
+  grid-area: word1;
+}
+
+.word2 {
+  grid-area: word2;
+}
+
+.word3 {
+  grid-area: word3;
+}
+
+.word4 {
+  grid-area: word4;
+}
+
+
+
+
+.clickable-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+input[type="color"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2; /* Ensure the color input is on top of other elements */
+}
+
+.colortitle {
+  grid-area: colortitle;
+}
+
+.color1 {
+  grid-area: color1;
+}
+
+.color2 {
+  grid-area: color2;
+}
+
+.color3 {
+  grid-area: color3;
+  width: 100%;
+  height: 100px;
+}
+
+.color4 {
+  grid-area: color4;
+}
+
+.emojititle {
+  grid-area: emojititle;
+}
+
+.emojis {
+  grid-area: emojis;
+}
+
+.emoji-block {
+  position: relative;
+  width: 50px;
+  min-height: 50px; /* Set a minimum height for visual clickability */
+  border: 1px solid #ddd;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.emojiblock {
+  border: 1px solid orangered;
+  display: flex;
+  justify-content: space-around;
+}
+
+.emoji1, .emoji2, .emoji3, .emoji4 {
+border: 1px solid blue;
+}
+
+.etctitle {
+  grid-area: etctitle;
+}
+
+.music {
+  grid-area: music;
+}
+
+.sizetitle {
+  grid-area: sizetitle;
+}
+
+.sizediff {
+  grid-area: sizediff;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      "shipname shipname shipname shipname"
+      "mainpic mainpic mainpic mainpic"
+      "mainpic mainpic mainpic mainpic"
+      "mainpic mainpic mainpic mainpic"
+      "aestitle aestitle aestitle aestitle"
+      "aespic1 aespic2 aespic3 aespic4"
+      "wordtitle wordtitle wordtitle wordtitle"
+      "word1 word2 word3 word4"
+      "colortitle colortitle colortitle colortitle"
+      "color1 color2 color3 color4"
+      "emojititle etctitle sizetitle sizetitle"
+      "emojis music sizediff sizediff";
+  }
+
+
+}

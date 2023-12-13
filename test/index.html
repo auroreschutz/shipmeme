@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="upload_field">
+	<form runat="server">
+		<img id="prev_img" src="images/img_ico.png">
+		<input id="upFile" ondrop="return false" onChange="validateFileType()" type="file" name="" accept=".png, .jpg, .jpeg .gif">
+		<p>Only jpg/jpeg and png file upload</p>
+		<span id="fileName">Upload</span>
+	</form>
+</div>
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
