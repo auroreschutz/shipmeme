@@ -4,149 +4,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Auraenity">
+  <meta name="description" content="Ship Meme Creator">
+  <meta property="og:title" content="Ship Meme Creator">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://auraenity.fr/shipmeme">
+  <meta property="og:image" content="img/favicon.webp">
+  <link rel="icon" type="image/webp" href="img/favicon.png" />
   <link rel="stylesheet" href="style.css">
-
-    <title>Ship Meme Creator</title>
+  <title>❤︎ Ship Meme Creator</title>
 </head>
 
 <body>
-  <h1>SHIP MEME</h1>
-  <div class="container ship">
+
+  <p class="colored-text pagetitle">SHIP MEME ❤︎ <small>by <a href="../" class="colored-text">auraenity</a></small></p>
+
+  <div class="container ship gradient-container" id="coloringDiv">
 
     <!-- Ship name -->
 
-    <div class="shipname"> <h2>Ship Name : </h2> <input type="text" id="nameship" placeholder="type word here" required minlength="2" maxlength="30" size="auto" /> </div>
+    <div class="shipname">
+      <input type="text" class="colored-text" id="nameship" placeholder="ship name" required minlength="2"
+        maxlength="30" size="auto" />
+    </div>
 
     <!-- Main Picture -->
 
-    <div class="mainpic" id="block1">
-
+    <div class="mainpic border-box" id="block1">
 
       <input type="file" accept="image/*" id="fileInput1" onchange="previewImage(this, 'block1')">
       <label for="fileInput1" class="file-label"></label>
-      <div id="placeholder1" class="image-placeholder">Main Picture of your ship <br> (click to upload)</div>
+      <div id="placeholder1" class="image-placeholder">main picture of your ship <br> (click to upload)</div>
       <img id="imagePreview1" src="" alt="Image Preview" class="uploaded-image">
 
-
     </div>
-
 
     <!-- Aesthetics -->
 
-    <div class="aestitle"><h2>Aesthetics</h2></div>
+    <div class="aestitle colored-text">
+      <h2>Aesthetics</h2>
+    </div>
 
-    <div class="aespic1" id="block2">
+    <div class="aespic1 border-box" id="block2">
 
       <input type="file" accept="image/*" id="fileInput2" onchange="previewImage(this, 'block2')">
       <label for="fileInput2" class="file-label"></label>
-      <div id="placeholder2" class="image-placeholder">Aesthetic 1</div>
+      <div id="placeholder2" class="image-placeholder">img 1</div>
       <img id="imagePreview2" src="" alt="Image Preview" class="uploaded-image">
 
-
     </div>
-    <div class="aespic2" id="block3">
+    <div class="aespic2 border-box" id="block3">
 
       <input type="file" accept="image/*" id="fileInput3" onchange="previewImage(this, 'block3')">
       <label for="fileInput3" class="file-label"></label>
-      <div id="placeholder3" class="image-placeholder">Aesthetic 2</div>
+      <div id="placeholder3" class="image-placeholder">img 2</div>
       <img id="imagePreview3" src="" alt="Image Preview" class="uploaded-image">
 
     </div>
-    <div class="aespic3" id="block4">
+    <div class="aespic3 border-box" id="block4">
 
       <input type="file" accept="image/*" id="fileInput4" onchange="previewImage(this, 'block4')">
       <label for="fileInput4" class="file-label"></label>
-      <div id="placeholder4" class="image-placeholder">Aesthetic 3</div>
+      <div id="placeholder4" class="image-placeholder">img 3</div>
       <img id="imagePreview4" src="" alt="Image Preview" class="uploaded-image">
 
     </div>
-    <div class="aespic4" id="block5">
+    <div class="aespic4 border-box" id="block5">
 
       <input type="file" accept="image/*" id="fileInput5" onchange="previewImage(this, 'block5')">
       <label for="fileInput5" class="file-label"></label>
-      <div id="placeholder5" class="image-placeholder">Aesthetic 4</div>
+      <div id="placeholder5" class="image-placeholder">img 4</div>
       <img id="imagePreview5" src="" alt="Image Preview" class="uploaded-image">
     </div>
 
-
-
     <!-- Words -->
-    <div class="wordtitle"><h2>In 4 words</h2></div>
+    <div class="wordtitle colored-text">
+      <h2>In 4 words</h2>
+    </div>
 
-    <div class="word1"><input type="text" id="word1" placeholder="type word here" required minlength="2" maxlength="15" size="auto" /></div>
-    <div class="word2"><input type="text" id="word2" placeholder="type word here" required minlength="2" maxlength="15" size="auto" /></div>
-    <div class="word3"><input type="text" id="word3" placeholder="type word here" required minlength="2" maxlength="15" size="auto" /></div>
-    <div class="word4"><input type="text" id="word4" placeholder="type word here" required minlength="2" maxlength="15" size="auto" /></div>
+    <div class="word1 border-box"><input type="text" class="colored-text" id="word1" placeholder="word 1" required
+        minlength="2" maxlength="15" size="auto" /></div>
+    <div class="word2 border-box"><input type="text" class="colored-text" id="word2" placeholder="word 2" required
+        minlength="2" maxlength="15" size="auto" /></div>
+    <div class="word3 border-box"><input type="text" class="colored-text" id="word3" placeholder="word 3" required
+        minlength="2" maxlength="15" size="auto" /></div>
+    <div class="word4 border-box"><input type="text" class="colored-text" id="word4" placeholder="word 4" required
+        minlength="2" maxlength="15" size="auto" /></div>
 
     <!-- Color Palette -->
-    <div class="colortitle"><h2>Palette</h2></div>
+    <div class="colortitle colored-text">
+      <h2>Palette</h2>
+    </div>
 
-    <div class="color1" id="colorBlock1">
+    <div class="color1 border-box" id="colorBlock1">
       <div class="clickable-area" onclick="openColorPicker('colorInput1')"></div>
       <input type="color" id="colorInput1" onchange="changeColor(this, 'colorBlock1')">
     </div>
-    <div class="color2" id="colorBlock2">
+    <div class="color2 border-box" id="colorBlock2">
       <input type="color" id="colorInput2" onchange="changeColor(this, 'colorBlock2')">
     </div>
-    <div class="color3" id="colorBlock3">
+    <div class="color3 border-box" id="colorBlock3">
       <input type="color" id="colorInput3" onchange="changeColor(this, 'colorBlock3')">
     </div>
+    <div class="color4 border-box" id="colorBlock4">
+      <input type="color" id="colorInput4" onchange="changeColor(this, 'colorBlock4')">
+    </div>
 
-    <div class="color4" id="colorBlock4">
-       <input type="color" id="colorInput4" onchange="changeColor(this, 'colorBlock4')">
-      </div>
-
-    <!-- Etc -->
-
-
-    <div class="etctitle">etctitle</div>
+    <!-- Icon from lordicon -->
+    <div class="etctitle"><lord-icon src="https://cdn.lordicon.com/jjoolpwc.json" trigger="loop" delay="2000"
+        stroke="bold" state="morph-glitter" colors="primary:#fff,secondary:#fff" style="width:50px;height:50px">
+      </lord-icon></div>
 
     <!-- Emojis -->
 
-    <div class="emojis"> <h3>Emojis</h3>
+    <div class="emojis border-box colored-text">
+      <h3>Emojis</h3>
 
       <div class="emojiblock">
-        <div class="emoji-block" id="emojiBlock1" contenteditable="true"></div>
-        <div class="emoji-block" id="emojiBlock2" contenteditable="true"></div>
-      <div class="emoji3">3</div>
-      <div class="emoji4">4</div>
-    </div>
+        <input type="text" class="emojicon" maxlength="5" size="auto" placeholder="♡"> <button
+          class="emoji-btn"></button>
+      </div>
 
     </div>
 
     <!-- Music -->
 
-    <div class="music">music</div>
+    <div class="music border-box colored-text">
+      <h2>♫</h2>
+      <input type="text" class="colored-text" id="music" placeholder="music" required minlength="2" maxlength="30"
+        size="auto" /></p>
+    </div>
 
     <!-- Size difference -->
 
-    <div class="sizediff" id="block6">
+    <div class="sizediff border-box colored-text" id="block6">
       <input type="file" accept="image/*" id="fileInput6" onchange="previewImage(this, 'block6')">
       <label for="fileInput6" class="file-label"></label>
       <div id="placeholder6" class="image-placeholder">
-        <p>Size difference <br><small> check it at <a href="/">site</a> </small></p>
+        <p>size difference</p>
       </div>
       <img id="imagePreview6" src="" alt="Image Preview" class="uploaded-image">
     </div>
-
-
-
 
   </div>
 
   <!-- Boutons -->
 
   <div class="boutons">
-    <button class="light">light</button>
-    <button class="save">save</button>
-    <button class="reset" onClick="window.location.reload();">reset</button>
 
+    <div class="infos">
+      <button onclick=" window.open('../shipgenerator','_blank')">shipname generator</button>
+      <button onclick=" window.open('https://hikaku-sitatter.com/en/','_blank')">size difference</button>
+    </div>
+    <div class="themebg">
+      <div id="colorpickerr"><input type="color" id="colorInputbg" onchange="changeColor(this, 'colorpickerr')"></div>
+      <div id="colorpickerr2"><input type="color" id="colorInputbg2" onchange="changeColor(this, 'colorpickerr2')">
+      </div>
+      <button id="changeColorButton">Background color</button>
+    </div>
+
+    <div class="themeborder">
+      <div id="colorborder"><input type="color" id="borderColorInput" onchange="changeColor(this, 'colorborder')"></div>
+      <button id="changeBorderColorButton">Border color</button>
+    </div>
+
+    <div class="themetext">
+      <div id="colortext"><input type="color" id="textColorInput" onchange="changeColor(this, 'colortext')"></div>
+      <button id="changeTextColorButton">Text color</button>
+    </div>
+
+    <div class="sauvegarde">
+      <button class="save" id="saveButton">Save</button>
+      <button class="reset" onClick="window.location.reload();">Reset</button> <br>
+    </div>
 
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/emoji-button@5.0.0/dist/emoji-button.min.js"></script>
-  <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   <script type="text/javascript" src="script2.js"></script>
-  <script type="text/javascript" src="script3.js"></script>
+  <script src="vanillaEmojiPicker.js"></script>
+  <script>
+
+    new EmojiPicker({
+      trigger: [
+        {
+          selector: '.emoji-btn',
+          insertInto: '.emojicon'
+        }
+      ],
+      closeButton: true,
+    });
+
+  </script>
 </body>
 
 </html>
