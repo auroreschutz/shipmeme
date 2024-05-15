@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend+Exa:wght@100;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend+Exa:wght@100;300&display=swap");
 
 *:focus {
   outline: none;
 }
 
+* {
+  align-items: flex-start;
+}
+
 body {
-  background-color: #A8D1F6;
+  background-color: #a8d1f6;
   background-image: url(heartbg.png);
 }
 
@@ -26,8 +30,13 @@ body {
   border-radius: 10px;
 }
 
-h1, h2, h3, input, .image-placeholder, .shipname{
-  font-family: 'Lexend Exa', sans-serif;
+h1,
+h2,
+h3,
+input,
+.image-placeholder,
+.shipname {
+  font-family: "Lexend Exa", sans-serif;
 }
 
 h1 {
@@ -35,28 +44,32 @@ h1 {
   letter-spacing: 40px;
 }
 
-h1, h2, h3, .etctitle {
+h1,
+h2,
+h3,
+.etctitle {
   text-align: center;
 }
 
-.pagetitle, .pagetitle a  {
-  font-family: 'Lexend Exa', sans-serif;
+.pagetitle,
+.pagetitle a {
+  font-family: "Lexend Exa", sans-serif;
   text-decoration: none;
   animation: float 2.5s ease-in-out;
 }
 
 .pagetitle a:hover {
-  text-transform:uppercase;
+  border-bottom: 1px solid #6e96b860;
 }
 
-.ship>div {
+.ship > div {
   position: relative;
   height: 100%;
   overflow: hidden;
   border-radius: 20px;
 }
 
-.ship>div:not(.shipname, .aestitle, .etctitle, .wordtitle, .colortitle) {
+.ship > div:not(.shipname, .aestitle, .etctitle, .wordtitle, .colortitle) {
   background-image: url(heartbg.png);
 }
 
@@ -65,12 +78,13 @@ h1, h2, h3, .etctitle {
 }
 
 .gradient-container {
-  background: linear-gradient(to bottom right, #cee1f3, #e0dbed); 
+  background: linear-gradient(to bottom right, #cee1f3, #dfdbed);
   background-size: 100%;
 }
 
-.colored-text, .pagetitle a {
-  color: #6E95B8; 
+.colored-text,
+.pagetitle a {
+  color: #6e95b8;
 }
 
 .ship {
@@ -105,11 +119,11 @@ button {
   border: none;
   box-shadow: 2px 2px 2px #6e96b83d;
   border: 1px solid #6e96b83d;
-  color: #6E95B8;
-  font-family: 'Bebas Neue', sans-serif;
+  color: #6e95b8;
+  font-family: "Bebas Neue", sans-serif;
 }
 
-button:hover{
+button:hover {
   transform: scale(1.1);
   transition: 1s;
 }
@@ -122,7 +136,10 @@ button:hover{
   background-color: #ffa4c7b6;
 }
 
-#colorpickerr, #colorpickerr2, #colorborder, #colortext {
+#colorpickerr,
+#colorpickerr2,
+#colorborder,
+#colortext {
   background-color: #ffffff3b;
   width: 50px;
   height: 50px;
@@ -132,10 +149,12 @@ button:hover{
   margin: 5px;
   margin-top: 10px;
   box-shadow: 2px 2px 2px #6e96b83d;
-  border: 1px solid #6e96b83d;;
+  border: 1px solid #6e96b83d;
 }
 
-.themebg, .themeborder, .themetext {
+.themebg,
+.themeborder,
+.themetext {
   display: flex;
 }
 
@@ -199,6 +218,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .mainpic {
@@ -206,6 +226,7 @@ img {
   position: relative;
   background-repeat: repeat;
   border-radius: 4%;
+  display: block;
 }
 
 .aestitle {
@@ -228,7 +249,12 @@ img {
   grid-area: aespic4;
 }
 
-.mainpic, .aespic1, .aespic2, .aespic3, .aespic4, .sizediff {
+.mainpic,
+.aespic1,
+.aespic2,
+.aespic3,
+.aespic4,
+.sizediff {
   background-image: none;
 }
 
@@ -237,11 +263,16 @@ input[type="text"] {
   font-size: 1.5em;
   border: none;
   text-align: center;
-} 
+}
 
-.wordtitle, .word1, .word2, .word3, .word4 {
+.wordtitle,
+.word1,
+.word2,
+.word3,
+.word4 {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .wordtitle {
@@ -281,7 +312,7 @@ input[type="color"] {
   height: 100%;
   opacity: 0;
   cursor: pointer;
-  z-index: 3; 
+  z-index: 3;
 }
 
 .colortitle {
@@ -315,7 +346,8 @@ input[type="color"] {
 .emoji-block {
   position: relative;
   width: 50px;
-  min-height: 50px; /* Set a minimum height for visual clickability */
+  min-height: 50px;
+  /* Set a minimum height for visual clickability */
   border: 1px solid #ddd;
   font-size: 20px;
   cursor: pointer;
@@ -331,19 +363,19 @@ input[type="color"] {
 
 .emojiblock input[type="text"] {
   background: transparent;
-  width:100%;
+  width: 100%;
   height: 100%;
   opacity: 100;
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 200%;
   letter-spacing: 10px;
   text-align: center;
   z-index: 1;
-} 
+}
 
 .emoji-btn {
   opacity: 0;
-  height:100%;
+  height: 100%;
   width: 100%;
   z-index: 6;
   position: absolute;
@@ -359,27 +391,26 @@ input[type="color"] {
 
 .music input[type="text"] {
   background: transparent;
-  width:100%;
+  width: 100%;
   height: auto;
   opacity: 100;
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 100%;
   letter-spacing: 0px;
   text-align: center;
   border: 0;
   border-bottom: 1px solid #6e96b86b;
-} 
+}
 
 .sizediff {
   grid-area: sizediff;
 }
 
 @media (max-width: 900px) {
-
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 14fr 1.5fr 4fr 1.5fr 2fr 1.5fr 2fr 4fr 3fr;
+    grid-template-rows: 2.5fr 14fr 1.5fr 5fr 1.5fr 2fr 1.5fr 2fr 4fr 4fr;
     gap: 10px 10px;
     grid-template-areas:
       "shipname shipname shipname etctitle"
@@ -394,24 +425,27 @@ input[type="color"] {
       "music music music music";
   }
 
-  .ship, .container {
+  .ship,
+  .container {
     margin: 0;
   }
 
-  .ship {
+  /* .ship {
     height: auto;
-  }
+  } */
 
   .image-placeholder {
     line-height: 50px;
     font-size: 10px;
   }
 
-  input[type="text"], .music input[type="text"] {
+  input[type="text"],
+  .music input[type="text"] {
     font-size: 1em;
-  } 
+  }
 
-  h2, h3 {
+  h2,
+  h3 {
     font-size: 15px;
     margin: 4px;
   }
@@ -420,18 +454,18 @@ input[type="color"] {
     display: flex;
     justify-content: center;
     align-items: center;
-      }
+  }
 
-   .emojiblock {
+  .emojiblock {
     width: auto;
     height: auto;
   }
-  
-   .emojiblock input[type="text"] {
+
+  .emojiblock input[type="text"] {
     height: 100%;
     font-size: 150%;
     padding: 5px;
-  } 
+  }
 
   h1 {
     letter-spacing: 2px;
@@ -448,26 +482,31 @@ input[type="color"] {
     margin: 0px;
     font-size: 10px;
   }
-  #colorpickerr, #colorpickerr2, #colorborder, #colortext  {
+
+  #colorpickerr,
+  #colorpickerr2,
+  #colorborder,
+  #colortext {
     width: 20px;
     margin: 0;
   }
 
-  .themebg, .themeborder, .themetext, .sauvegarde {
+  .themebg,
+  .themeborder,
+  .themetext,
+  .sauvegarde {
     display: flex;
     margin: 5px;
     margin-left: 5px;
     margin-right: 5px;
   }
-
 }
 
 @media (max-width: 500px) {
-
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 6fr 1fr 3fr 1fr 2fr 1fr 2fr 2fr 4fr;
+    grid-template-rows: 2fr 10fr 1.5fr 3fr 1fr 2fr 1.5fr 2fr 3fr 4fr;
     gap: 10px 10px;
     grid-template-areas:
       "shipname shipname shipname shipname"
@@ -483,20 +522,29 @@ input[type="color"] {
       "etctitle etctitle sizediff sizediff";
   }
 
-  input[type="text"], .music input[type="text"] {
+  input[type="text"],
+  .music input[type="text"] {
     font-size: 0.7em;
-  } 
+  }
+
   .emojis {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-      }
+  }
 
-   .emojiblock input[type="text"] {
+  .emojiblock input[type="text"] {
     font-size: 100%;
-  } 
+  }
 }
+
+/* @media screen and (-webkit-min-device-pixel-ratio: 1.25) {
+  html {
+    transform: scale(0.8); 
+    transform-origin: top center;
+}
+} */
 
 @keyframes float {
   0% {
@@ -506,4 +554,82 @@ input[type="color"] {
   100% {
     transform: translatey(0px);
   }
+}
+
+#textBubble {
+  display: none;
+  position: absolute;
+  margin-top: -20px;
+  background-color: #bcdbf8;
+  padding: 8px;
+  border-radius: 15px;
+  z-index: 1;
+  box-shadow: 2px 2px 2px #6e96b83d;
+  border: 1px solid #6e96b83d;
+  font-size: 75%;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+  color: #6e95b8;
+}
+
+#saveButton:hover + #textBubble {
+  display: block;
+}
+
+.explications {
+  border: 5px solid red;
+}
+
+/* Hidden by default */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Darken background */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  width: 50%;
+  background: linear-gradient(to bottom right, #cee1f3, #dfdbed);
+  border-radius: 10px;
+  color: #6e95b8;
+  filter: drop-shadow(4px 4px 4px rgba(92, 92, 92, 0.13));
+  text-align: center;
+  font-family: "Lexend Exa", sans-serif;
+  animation: float 2s ease-in-out;
+}
+
+.modal-content img {
+  width: 60%;
+  margin: auto;
+  display: block;
+  padding: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #6e95b8;;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#understandBtn {
+  width: 150px;
+  font-size: 20px;
 }

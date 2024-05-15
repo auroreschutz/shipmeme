@@ -53,7 +53,7 @@
 
       <input type="file" accept="image/*" id="fileInput1" onchange="previewImage(this, 'block1')">
       <label for="fileInput1" class="file-label"></label>
-      <div id="placeholder1" class="image-placeholder">main picture of your ship <br> (click to upload)</div>
+      <div id="placeholder1" class="image-placeholder">main picture<br> (click to upload)</div>
       <img id="imagePreview1" src="" alt="Image Preview" class="uploaded-image">
 
     </div>
@@ -161,7 +161,7 @@
       <input type="file" accept="image/*" id="fileInput6" onchange="previewImage(this, 'block6')">
       <label for="fileInput6" class="file-label"></label>
       <div id="placeholder6" class="image-placeholder">
-        <p>size difference</p>
+        <p>extra image</p>
       </div>
       <img id="imagePreview6" src="" alt="Image Preview" class="uploaded-image">
     </div>
@@ -174,7 +174,7 @@
 
     <div class="infos">
       <button onclick=" window.open('../shipgenerator','_blank')">shipname generator</button>
-      <button onclick=" window.open('https://www.heightcomparison.com/','_blank')">size difference</button>
+      <button id="openModalBtn">How it works</button>
     </div>
     <div class="themebg">
       <div id="colorpickerr"><input type="color" id="colorInputbg" onchange="changeColor(this, 'colorpickerr')"></div>
@@ -201,6 +201,23 @@
 
   </div>
 
+  <!-- Popup explications -->
+
+<div id="explications" class="modal">
+  <div class="modal-content">
+    <!-- Close button -->
+    <span class="close" id="closeModal">&times;</span>
+    <h2>How It Works</h2>
+    <p>Create your ship (or single character) aesthetics ✨<br> Pick emojis, pictures, words & colors ... <br></p>
+    <p>You can also customize the background, borders & text !<br>
+    You can then screenshot your page and share anywhere you want ~</p>
+    <small></small>
+    <img src="explain.gif" alt="how it works"> 
+    <button id="understandBtn">I understand</button>
+
+  </div>
+</div>
+
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   <script type="text/javascript" src="script2.js"></script>
@@ -216,6 +233,51 @@
       ],
       closeButton: true,
     });
+
+  </script>
+  <script>
+var modal = document.getElementById("explications");
+var openModalBtn = document.getElementById("openModalBtn");
+var closeModalBtn = document.getElementById("closeModal");
+var understandBtn = document.getElementById("understandBtn");
+
+// open the modal
+function openModal() {
+  modal.style.display = "block";
+}
+
+// close the modal
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// clicks the button, open the modal
+openModalBtn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// clicks on the close button, close the modal
+closeModalBtn.onclick = function() {
+  closeModal();
+}
+
+// clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+
+// clicks the 'I understand' button, close the modal
+understandBtn.onclick = function() {
+  closeModal();
+}
+
+// Open the modal when the page first loads
+window.onload = function() {
+  openModal();
+}
+
 
   </script>
 </body>
